@@ -6,108 +6,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutrición Digital - Registro</title>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body class="container">
 
-    <header class="header">
-        <div class="logo">
-            <img src="img/logo.png" alt="Logo de la Coordinación Regional de Nutrición y Dietética">
-            <p>Nutrición Digital
-            <p>
-        </div>
-        <div class="menu">
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="sobre.html">Sobre la App</a>
-                <a href="funcionalidades.html">Funcionalidades</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="registro.html">Registro</a>
-            </nav>
-        </div>
-    </header>
-    <hr>
+    <header>
+        <nav class="navbar navbar-expand-md py-3 mb-4 border-bottom">
+            <div class="container">
+                <a href="index.html"
+                    class="navbar-brand d-flex align-items-center link-body-emphasis text-decoration-none">
+                    <img width="40" height="40" aria-hidden="true" src="img/logo.png"
+                        alt="Logo de la Coordinación Regional de Nutrición y Dietética" />
+                    <span class="fs-4 ms-4 text-primary">Nutrición Digital</span>
+                </a>
 
-    <main class="main">
-        <section class="section">
-            <h1>Formulario de Registro</h1>
-            <p>Para usar la aplicacion <strong>Nutricion Digital</strong> debes pertenecer a la red hospitalaria o
-                ambulatoria del estado Zulia. Los campos marcados con (*) son obligatorios.</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="container-formulario">
-                <div class="card-formulario">
-                    <form class="formulario" method="post">
-                        <label for="cedula">Nacionalidad: *</label>
-                        <select id="tipoCedula" name="tipoCedula" required>
-                            <option value="V">V</option>
-                            <option value="E">E</option>
-                        </select>
-                        <br>
-                        <label for="ncedula">Numero de cedula: *</label>
-                        <input type="number" id="cedula" name="ncedula" required>
-                        <br>
-                        <label for="primerNombre">Primer nombre: *</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                        <br>
-                        <label for="segundoNombre">Segundo nombre: </label>
-                        <input type="text" id="segundoNombre" name="segundoNombre">
-                        <br>
-                        <label for="primerApellido">Primer apellido: *</label>
-                        <input type="text" id="primerApellido" name="primerApellido" required>
-                        <br>
-                        <label for="segundoApellido">Segundo apellido: *</label>
-                        <input type="text" id="segundoApellido" name="segundoApellido" required>
-                        <br>
-                        <label for="genero">Género: *</label>
-                        <input type="radio" id="masculino" name="genero" value="masculino" required> Masculino
-                        <input type="radio" id="femenino" name="genero" value="femenino" required> Femenino
-                        <br><br>
-
-                        <label for="telefono">Teléfono: *</label>
-                        <input type="tel" id="telefono" name="telefono" required>
-                        <br>
-
-                        <label for="centro">Centro de trabajo:</label>
-                        <input type="checkbox" id="ambulatorio" name="centro" value="Ambulatorio"> Ambulatorio
-                        <input type="checkbox" id="hospital" name="centro" value="Hospital"> Hospital
-                        <br><br>
-
-                        <label for="descripcion">Descripción del cargo:</label>
-                        <textarea id="descripcion" name="descripcion" rows="4" cols="50"></textarea>
-                        <br>
-
-                        <label for="email">Correo electrónico: *</label>
-                        <input type="email" id="email" name="email" required>
-                        <br>
-
-                        <label for="clave">Contraseña: *</label>
-                        <input type="password" id="clave" name="clave" required>
-                        <br><br>
-
-                        <button type="reset">Limpiar campos</button>
-                        <br>
-                        <button type="submit">Solicitar acceso</button>
-                    </form>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav nav-pills ms-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link" aria-current="page">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sobre.html" class="nav-link">Sobre la App</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="funcionalidades.html" class="nav-link">Funcionalidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacto.html" class="nav-link">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="registro.html" class="nav-link active">Registro</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section>
+                <h1 class="text-center">Formulario de Registro</h1>
+                <p class="text-center">Para usar la aplicacion <b>Nutricion Digital</b> debes pertenecer a la red
+                    hospitalaria o
+                    ambulatoria del estado Zulia. Los campos marcados con (*) son obligatorios.</p>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-8 mt-3">
+                        <form class="card p-4" method="post">
+                            <div class="row mb-3">
+                                <div class="col-md-3"> <label for="tipoCedula" class="form-label">Nacionalidad:
+                                        *</label>
+                                    <select id="tipoCedula" name="tipoCedula" class="form-select" required>
+                                        <option value="V">V</option>
+                                        <option value="E">E</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-9"> <label for="cedula" class="form-label">Número de cédula:
+                                        *</label>
+                                    <input type="number" class="form-control" id="cedula" name="ncedula" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Primer nombre: *</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="segundoNombre" class="form-label">Segundo nombre: </label>
+                                <input type="text" class="form-control" id="segundoNombre" name="segundoNombre">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="primerApellido" class="form-label">Primer apellido: *</label>
+                                <input type="text" class="form-control" id="primerApellido" name="primerApellido"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="segundoApellido" class="form-label">Segundo apellido: *</label>
+                                <input type="text" class="form-control" id="segundoApellido" name="segundoApellido"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label d-block">Género: *</label>
+                                <div class="form-check form-check-inline"> <input type="radio" class="form-check-input"
+                                        id="masculino" name="genero" value="masculino" required>
+                                    <label class="form-check-label" for="masculino">Masculino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="femenino" name="genero"
+                                        value="femenino" required>
+                                    <label class="form-check-label" for="femenino">Femenino</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono: *</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label d-block">Centro de trabajo:</label>
+                                <div class="form-check form-check-inline"> <input type="checkbox"
+                                        class="form-check-input" id="ambulatorio" name="centro" value="Ambulatorio">
+                                    <label class="form-check-label" for="ambulatorio">Ambulatorio</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="hospital" name="centro"
+                                        value="Hospital">
+                                    <label class="form-check-label" for="hospital">Hospital</label>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="descripcion" class="form-label">Descripción del cargo:</label>
+                                <textarea id="descripcion" name="descripcion" class="form-control" rows="4"></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico: *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="clave" class="form-label">Contraseña: *</label>
+                                <input type="password" class="form-control" id="clave" name="clave" required>
+                            </div>
+
+                            <div class="mt-4"> <button type="reset" class="btn btn-secondary me-2">Limpiar
+                                    campos</button> <button type="submit" class="btn btn-primary">Solicitar
+                                    acceso</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <hr>
-    <footer class="footer">
-        <div class="logo">
-            <img src="img/logo.png" alt="Logo de la Coordinación Regional de Nutrición y Dietética">
-            <p>Nutrición Digital
-            <p>
-        </div>
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Inicio</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link px-2 text-body-secondary">Sobre la App</a>
+                </li>
+                <li class="nav-item"><a href="funcionalidades.html"
+                        class="nav-link px-2 text-body-secondary">Funcionalidades</a></li>
+                <li class="nav-item"><a href="contacto.html" class="nav-link px-2 text-body-secondary">Contacto</a></li>
+                <li class="nav-item"><a href="registro.html" class="nav-link px-2 text-body-secondary">Registro</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2025 Nutrición Digital - Todos los derechos reservados</p>
+            <p class="text-center text-body-secondary">Desarrollado por Andres Moreno con fines educativos</p>
+        </footer>
+    </div>
 
-        <div class="footer-content">
-            <p>© 2025 Nutrición Digital - Todos los derechos reservados</p>
-            <p>Desarrollado por Andres Moreno con fines educativos</p>
-        </div>
-    </footer>
-
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
