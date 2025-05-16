@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrición Digital - Registro</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="container">
+
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo de la Coordinación Regional de Nutrición y Dietética">
+            <p>Nutrición Digital
+            <p>
+        </div>
+        <div class="menu">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="sobre.html">Sobre la App</a>
+                <a href="funcionalidades.html">Funcionalidades</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="registro.html">Registro</a>
+            </nav>
+        </div>
+    </header>
+    <hr>
+
+    <main class="main">
+        <section class="section">
+            <h1>Formulario de Registro</h1>
+            <p>Para usar la aplicacion <strong>Nutricion Digital</strong> debes pertenecer a la red hospitalaria o
+                ambulatoria del estado Zulia. Los campos marcados con (*) son obligatorios.</p>
+
+            <div class="container-formulario">
+                <div class="card-formulario">
+                    <form class="formulario" method="post">
+                        <label for="cedula">Nacionalidad: *</label>
+                        <select id="tipoCedula" name="tipoCedula" required>
+                            <option value="V">V</option>
+                            <option value="E">E</option>
+                        </select>
+                        <br>
+                        <label for="ncedula">Numero de cedula: *</label>
+                        <input type="number" id="cedula" name="ncedula" required>
+                        <br>
+                        <label for="primerNombre">Primer nombre: *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <br>
+                        <label for="segundoNombre">Segundo nombre: </label>
+                        <input type="text" id="segundoNombre" name="segundoNombre">
+                        <br>
+                        <label for="primerApellido">Primer apellido: *</label>
+                        <input type="text" id="primerApellido" name="primerApellido" required>
+                        <br>
+                        <label for="segundoApellido">Segundo apellido: *</label>
+                        <input type="text" id="segundoApellido" name="segundoApellido" required>
+                        <br>
+                        <label for="genero">Género: *</label>
+                        <input type="radio" id="masculino" name="genero" value="masculino" required> Masculino
+                        <input type="radio" id="femenino" name="genero" value="femenino" required> Femenino
+                        <br><br>
+
+                        <label for="telefono">Teléfono: *</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                        <br>
+
+                        <label for="centro">Centro de trabajo:</label>
+                        <input type="checkbox" id="ambulatorio" name="centro" value="Ambulatorio"> Ambulatorio
+                        <input type="checkbox" id="hospital" name="centro" value="Hospital"> Hospital
+                        <br><br>
+
+                        <label for="descripcion">Descripción del cargo:</label>
+                        <textarea id="descripcion" name="descripcion" rows="4" cols="50"></textarea>
+                        <br>
+
+                        <label for="email">Correo electrónico: *</label>
+                        <input type="email" id="email" name="email" required>
+                        <br>
+
+                        <label for="clave">Contraseña: *</label>
+                        <input type="password" id="clave" name="clave" required>
+                        <br><br>
+
+                        <button type="reset">Limpiar campos</button>
+                        <br>
+                        <button type="submit">Solicitar acceso</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <hr>
+    <footer class="footer">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo de la Coordinación Regional de Nutrición y Dietética">
+            <p>Nutrición Digital
+            <p>
+        </div>
+
+        <div class="footer-content">
+            <p>© 2025 Nutrición Digital - Todos los derechos reservados</p>
+            <p>Desarrollado por Andres Moreno con fines educativos</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
