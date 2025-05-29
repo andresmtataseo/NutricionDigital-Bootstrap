@@ -7,6 +7,34 @@
     <title>Nutrición Digital - Inicio</title>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        #btnVolverArriba {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #0d6efd;
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #btnVolverArriba:hover {
+            background-color: #0b5ed7;
+        }
+
+        .card.border-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+    </style>
 </head>
 
 <body>
@@ -53,11 +81,19 @@
 
         <div class="container mt-5 mb-2">
             <div>
+                <div id="saludoDinamico" class="text-center fs-5 mb-2"></div>
                 <h1 class="text-center">Nutrición Digital</h1>
                 <p class="text-center">La <span class="text-primary">aplicación oficial</span> desarrollada para
                     optimizar la
                     <span class="text-primary">atención nutricional</span> en la red pública de salud del estado.
                 </p>
+                <div class="text-center">
+                    <button onclick="solicitarDatos()" class="btn btn-primary">Solicitar
+                        acceso</button>
+                </div>
+                <div id="datosMostrados" class="mt-4 p-3 border rounded" style="display: none;">
+                    <h3 class="text-center mb-3">Datos Personales Ingresados</h3>
+                </div>
                 <div class="text-center">
                     <img class="img-fluid" style="max-height: 450px;" src="img/banner.png" alt="banner">
                 </div>
@@ -115,8 +151,11 @@
                 <h2 class="text-center mb-3">Método Manual VS. Aplicación Digital</h2>
                 <table class="table table-bordered text-center">
                     <tr class="table-active">
-                        <th><b>MÉTODO MANUAL</b></th>
-                        <th><b>APLICACIÓN DIGITAL</b></th>
+                        <th data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Prácticas tradicionales de gestión de datos y citas."><b>MÉTODO MANUAL</b></th>
+                        <th data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Uso de nuestra plataforma centralizada para optimizar procesos."><b>APLICACIÓN
+                                DIGITAL</b></th>
                     </tr>
                     <tr>
                         <td>Libros fisicos o archivos Excel locales</td>
@@ -212,7 +251,7 @@
                             credenciales
                             institucionales.</p>
                         <p>Para cualquier duda o problema técnico, contacta a nuestro equipo de soporte.</p>
-                        <a href="contacto.html">Contactar al equipo de soporte</a>
+                        <a href="contacto.html" class="btn btn-outline-primary">Contactar al equipo de soporte</a>
                     </div>
                 </div>
             </section>
@@ -231,12 +270,16 @@
                 <li class="nav-item"><a href="contacto.html" class="nav-link px-2 text-body-secondary">Contacto</a></li>
                 <li class="nav-item"><a href="registro.html" class="nav-link px-2 text-body-secondary">Registro</a></li>
             </ul>
-            <p class="text-center text-body-secondary">© 2025 Nutrición Digital - Todos los derechos reservados</p>
+            <p class="text-center text-body-secondary">© <span id="currentYear"></span> Nutrición Digital - Todos los
+                derechos reservados</p>
             <p class="text-center text-body-secondary">Desarrollado por Andres Moreno con fines educativos</p>
         </footer>
     </div>
 
+    <button onclick="volverArriba()" id="btnVolverArriba" title="Ir arriba">&#8679;</button>
+
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
